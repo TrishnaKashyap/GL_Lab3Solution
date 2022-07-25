@@ -21,5 +21,6 @@ public class Driver {
         Scanner in = new Scanner(System.in);
         int sum = in.nextInt();
         bst.findPairWithSum(root, sum);
+        in.close();
     }
 }
