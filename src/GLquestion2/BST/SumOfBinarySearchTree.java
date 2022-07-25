@@ -1,6 +1,6 @@
 package GLquestion2.BST;
 
-import java.util.*;
+import java.util.HashSet;
 
 public class SumOfBinarySearchTree {
     public static class Node{
@@ -17,7 +17,7 @@ public class SumOfBinarySearchTree {
     private boolean findSum(Node root, int sum, HashSet set) {
         if(root == null) return false;
         if(findSum(root.left, sum, set)) return true;
-        if(set.contains(sum- root.data)){
+        if(set.contains(sum - root.data)){
             System.out.println("Pair found");
             System.out.println(sum-root.data + " + " + root.data);
             return true;
